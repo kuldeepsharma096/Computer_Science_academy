@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Review System - U Computer Institute</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+
+    .review-container {
+      background: #fff;
+      max-width: 600px;
+      margin: auto;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    }
+
+    .review-container h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    .stars {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+      gap: 5px;
+    }
+
+    .star {
+      font-size: 30px;
+      color: #ccc;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    .star.active {
+      color: gold;
+    }
+
+    textarea {
+      width: 100%;
+      height: 100px;
+      padding: 10px;
+      font-size: 15px;
+      margin-top: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      resize: none;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      display: block;
+      width: 100%;
+    }
+
+    .reviews {
+      margin-top: 30px;
+    }
+
+    .reviews h3 {
+      margin-bottom: 15px;
+      color: #444;
+    }
+
+    .review-item {
+      background: #f9f9f9;
+      border-left: 5px solid #007bff;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 6px;
+    } */
+  </style>
+</head>
+<body>
+    <nav>
+        <div class="nav__logo">U Computer Institute</div> 
+        <ul class="nav__links">
+          <li class="link"><a href="index.html">Home</a></li>
+          <li class="link"><a href="about.html">About</a></li>
+          <li class="link"><a href="courses.html">Courses</a></li>
+          <li class="link"><a href="review.html">Review</a></li>
+          <li class="link"><a href="contact.html">Contact</a></li>
+        </ul>
+        <a href="contact.html"><button class="btn">Contact</button></a>
+      </nav>
+
+  <div class="review-container">
+    <h2>Leave a Review</h2>
+    
+    <div class="stars" id="starContainer">
+      <span class="star" data-value="1">&#9733;</span>
+      <span class="star" data-value="2">&#9733;</span>
+      <span class="star" data-value="3">&#9733;</span>
+      <span class="star" data-value="4">&#9733;</span>
+      <span class="star" data-value="5">&#9733;</span>
+    </div>
+
+    <textarea id="reviewText" placeholder="Write your feedback..."></textarea>
+    <button onclick="submitReview()">Submit Review</button>
+
+    <div class="reviews" id="reviews">
+      <h3>What others say:</h3>
+      <!-- Reviews will appear here -->
+    </div>
+  </div>
+
+  <script src="script.js">
+    // let selectedRating = 0;
+    // const stars = document.querySelectorAll('#starContainer .star');
+
+    // stars.forEach(star => {
+    //   star.addEventListener('click', () => {
+    //     selectedRating = parseInt(star.getAttribute('data-value'));
+
+    //     stars.forEach(s => s.classList.remove('active'));
+
+    //     stars.forEach(s => {
+    //       if (parseInt(s.getAttribute('data-value')) <= selectedRating) {
+    //         s.classList.add('active');
+    //       }
+    //     });
+    //   });
+    // });
+
+    // function submitReview() {
+    //   const reviewText = document.getElementById('reviewText').value.trim();
+    //   if (selectedRating === 0 || reviewText === "") {
+    //     alert("Please select a rating and write a review.");
+    //     return;
+    //   }
+
+    //   const reviewsContainer = document.getElementById('reviews');
+    //   const newReview = document.createElement('div');
+    //   newReview.className = 'review-item';
+    //   newReview.innerHTML = `
+    //     <strong>${'★'.repeat(selectedRating)}${'☆'.repeat(5 - selectedRating)}</strong>
+    //     <p>${reviewText}</p>
+    //   `;
+    //   reviewsContainer.appendChild(newReview);
+
+    //   // Reset form
+    //   selectedRating = 0;
+    //   document.getElementById('reviewText').value = "";
+    //   stars.forEach(s => s.classList.remove('active'));
+    // }
+  </script>
+</body>
+</html>
